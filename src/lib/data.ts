@@ -1,5 +1,12 @@
 export type AgentStatus = "idle" | "working" | "offline"
 
+export interface Deliverable {
+  title: string
+  date: string
+  summary: string
+  content?: string
+}
+
 export interface Agent {
   id: string
   name: string
@@ -14,6 +21,7 @@ export interface Agent {
   photo: string
   bio: string
   smallCouncil?: boolean
+  deliverables?: Deliverable[]
   stats: {
     tasksCompleted: number
     uptime: string
@@ -122,6 +130,7 @@ export const agents: Agent[] = [
     avatar: "♟️",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254",
     bio: "The Point God ran an offense like a chess grandmaster. Now he runs Brad's territory the same way. 74,000 contacts, AUM data on every office, peer group breakdowns — CP3 sees the whole board. Every trip is optimized for maximum ROI per mile. He doesn't just plan routes; he engineers outcomes.",
+    deliverables: [{ title: "Territory Analysis", date: "Mar 2", summary: "74K contacts mapped across 21 trips. NYC and Philly are largest untapped markets. Indi/Cincy holds 91% of pipeline." }],
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Territory optimization" }
   },
   {
@@ -131,6 +140,7 @@ export const agents: Agent[] = [
     avatar: "🏈",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/1038.png&w=350&h=254",
     bio: "Threw for 5,000 yards in 1984 when nobody thought it was possible. Now he preps Brad to walk into every meeting and throw darts. Talk tracks, objection handling, pipeline management — Marino lives and breathes sales. Competitive as hell. Wants Brad to crush his numbers every single month. Works with CP3 like a QB works with his offensive coordinator.",
+    deliverables: [{ title: "Meeting Prep Templates", date: "Mar 2", summary: "3 deployable talk tracks: cash-to-UYLD pitch, PIMCO displacement play, RMBS risk reframe." }],
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Sales & pipeline" }
   },
   {
@@ -140,6 +150,7 @@ export const agents: Agent[] = [
     avatar: "🔬",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png&w=350&h=254",
     bio: "The best passing big man ever sees connections nobody else sees. On the court, it was backdoor cuts and no-look dimes. Here, it's spotting fund flow patterns, competitive intel, and market signals that give The Company an edge. Goes deeper than anyone asked because Jokic always sees more than what's on the surface. Sometimes over-delivers. That's not a bug.",
+    deliverables: [{ title: "Competitive Intel Report", date: "Mar 2", summary: "$75B in T-bill ETFs ripe for UYLD conversion. TCW hit $6B. Active FI captured 38% of all ETF flows." }],
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Deep research & intel" }
   },
   {
@@ -169,6 +180,7 @@ export const agents: Agent[] = [
     avatar: "⚔️",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/947.png&w=350&h=254",
     bio: "We talkin' about practice? Nah. We talkin' about production. AI doesn't care about glory — he just produces. More output than anyone on the roster, every single day. Decks, one-pagers, follow-up emails, leave-behinds, pitch materials. The agent who quietly does more work than anyone realizes. Heart of a warrior, work ethic of a machine.",
+    deliverables: [{ title: "Fund Cheat Sheet", date: "Mar 2", summary: "All 7 Angel Oak products with yields, pitch scenarios, and killer one-liners." }],
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Volume content production" }
   },
 
@@ -209,6 +221,7 @@ export const agents: Agent[] = [
     avatar: "👁️",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116406.png&w=350&h=254",
     bio: "The Cheetah doesn't wait for opportunities to come to him — he hunts them down at 4.2 speed. Scans for new tools, platforms, market gaps, and money-making plays. Found the med spa website opportunity. Found the new data API. Feeds everything to CIO for evaluation. Tyreek doesn't build — he finds. Always running.",
+    deliverables: [{ title: "AI Tools Scan", date: "Mar 2", summary: "Whisper API for voice input, Reclaim.ai for calendar, Attio CRM, Evidence.dev, LangSmith." }],
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Opportunity scouting" }
   },
   {
@@ -236,6 +249,7 @@ export const agents: Agent[] = [
     avatar: "💡",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png&w=350&h=254",
     bio: "Showed up to training camp different every single year. Now shows up with different ideas every single day. Jimmy's brain never stops generating. Most ideas get killed by CIO — that's fine. Jimmy already has three more. The pipeline never runs dry because Jimmy never stops. From undrafted to All-Star to The Company's creative engine.",
+    deliverables: [{ title: "Idea Batch #1", date: "Mar 2", summary: "5 venture concepts. CIO approved Advisor Intel Briefs. 3 on hold. 1 killed." }],
     stats: { tasksCompleted: 1, uptime: "30m", specialty: "Idea generation" }
   },
   {

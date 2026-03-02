@@ -111,6 +111,21 @@ export function AgentCard({ agent }: { agent: Agent }) {
             ))}
           </div>
 
+          {agent.deliverables && agent.deliverables.length > 0 && (
+            <div className="mt-3">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">Deliverables</p>
+              {agent.deliverables.map((d, i) => (
+                <div key={i} className="rounded-lg border border-slate-100 bg-slate-50/50 p-3 mb-2">
+                  <div className="flex justify-between items-center">
+                    <p className="text-sm font-bold text-slate-900">{d.title}</p>
+                    <span className="text-[10px] text-slate-400">{d.date}</span>
+                  </div>
+                  <p className="mt-1 text-[11px] text-slate-500">{d.summary}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
           {agent.lastTask && (
             <div className="mt-3 rounded-lg p-3" style={{ background: `${teamColor}08`, border: `1px solid ${teamColor}15` }}>
               <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: `${teamColor}60` }}>Current / Last Task</p>

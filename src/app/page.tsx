@@ -159,7 +159,7 @@ export default function Home() {
           {/* Quick links below floor on mobile */}
           <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {[
-              { label: "📊 ETF Tool", href: "https://etf-tool.vercel.app", desc: "Fund comparison", color: "#00d4ff" },
+              { label: "📊 ETF Tool", href: "https://etf-tool-three.vercel.app", desc: "Fund comparison", color: "#00d4ff" },
               { label: "👥 Full Roster", href: "/agents", desc: "All 21 agents", color: "#00ff88" },
               { label: "📡 Meetings", href: "/meetings", desc: "Schedule", color: "#a855f7" },
               { label: "🚀 Ventures", href: "/ventures", desc: "Business units", color: "#ff6b2b" },
