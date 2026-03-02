@@ -1,11 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { agents, activities } from "@/lib/data"
 
 type FilterType = "all" | "task" | "communication" | "alert" | "system"
+
+const typeColors: Record<string, string> = {
+  task: "#0e7490",
+  alert: "#dc2626",
+  system: "#7c3aed",
+  communication: "#64748b",
+}
 
 export default function ActivityPage() {
   const [filter, setFilter] = useState<FilterType>("all")
@@ -17,7 +24,7 @@ export default function ActivityPage() {
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-lg font-bold text-slate-900">Activity Feed</h1>
-          <p className="text-xs text-slate-400">{activities.length} events today</p>
+          <p className="text-xs text-slate-400">{activities.length} events · March 2, 2026</p>
         </div>
       </div>
 
@@ -40,34 +47,42 @@ export default function ActivityPage() {
 
       <Card>
         <CardContent className="p-0">
-          {filtered.map((activity) => {
-            const agent = agents.find((a) => a.id === activity.agentId)
-            return (
-              <div key={activity.id} className="flex gap-3 border-b border-slate-50 px-4 py-4 last:border-0">
-                <span className="mt-0.5 text-lg">{agent?.avatar || "?"}</span>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2">
-                    <p className="text-sm font-bold text-slate-900">{activity.agentName}</p>
-                    <Badge variant="outline" className="text-[9px]" style={{
-                      borderColor: activity.type === "task" ? "#0e7490" : activity.type === "alert" ? "#dc2626" : activity.type === "system" ? "#7c3aed" : "#64748b",
-                      color: activity.type === "task" ? "#0e7490" : activity.type === "alert" ? "#dc2626" : activity.type === "system" ? "#7c3aed" : "#64748b",
-                    }}>
-                      {activity.type}
-                    </Badge>
-                    <span className="ml-auto text-[10px] text-slate-400">{activity.timestamp}</span>
-                  </div>
-                  <p className="mt-0.5 text-[13px] font-medium text-slate-700">{activity.action}</p>
-                  <p className="mt-0.5 text-[11px] text-slate-400">{activity.detail}</p>
-                </div>
-              </div>
-            )
-          })}
+          <div className="relative">
+            {/* Timeline */}
+            <div className="absolute left-7 top-0 bottom-0 w-px bg-slate-100" />
 
-          {filtered.length === 0 && (
-            <div className="py-12 text-center">
-              <p className="text-sm text-slate-400">No activity matching this filter</p>
-            </div>
-          )}
+            {filtered.map((activity) => {
+              const agent = agents.find((a) => a.id === activity.agentId)
+              return (
+                <div key={activity.id} className="relative flex gap-4 border-b border-slate-50 px-4 py-4 last:border-0 transition-colors hover:bg-slate-50/50">
+                  <div className="relative z-10 h-10 w-10 shrink-0 overflow-hidden rounded-full border-2 border-white bg-slate-100 shadow-sm">
+                    <img src={agent?.photo} alt={agent?.name} className="h-full w-full object-cover object-top" />
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-bold text-slate-900">{activity.agentName}</p>
+                      <Badge variant="outline" className="text-[9px]" style={{
+                        borderColor: typeColors[activity.type],
+                        color: typeColors[activity.type],
+                      }}>
+                        {activity.type}
+                      </Badge>
+                      <span className="ml-auto text-[10px] text-slate-400">{activity.timestamp}</span>
+                    </div>
+                    <p className="mt-0.5 text-[13px] font-medium text-slate-700">{activity.action}</p>
+                    <p className="mt-0.5 text-[11px] text-slate-400">{activity.detail}</p>
+                  </div>
+                </div>
+              )
+            })}
+
+            {filtered.length === 0 && (
+              <div className="py-16 text-center">
+                <p className="text-sm text-slate-400">No activity matching this filter</p>
+              </div>
+            )}
+          </div>
         </CardContent>
       </Card>
     </main>
