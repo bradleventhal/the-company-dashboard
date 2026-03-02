@@ -118,7 +118,7 @@ export const agents: Agent[] = [
   {
     id: "cp3", name: "CP3", realName: "Chris Paul", role: "Territory Strategy",
     title: "Routing, trip optimization, office targeting",
-    team: "product", status: "idle", lastTask: "Awaiting activation", lastActive: "—",
+    team: "product", status: "idle", lastTask: "Territory analysis — 74K contacts, 21 trips mapped", lastActive: "1:21 AM",
     avatar: "♟️",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2779.png&w=350&h=254",
     bio: "The Point God ran an offense like a chess grandmaster. Now he runs Brad's territory the same way. 74,000 contacts, AUM data on every office, peer group breakdowns — CP3 sees the whole board. Every trip is optimized for maximum ROI per mile. He doesn't just plan routes; he engineers outcomes.",
@@ -127,7 +127,7 @@ export const agents: Agent[] = [
   {
     id: "marino", name: "Marino", realName: "Dan Marino", role: "Sales Strategy",
     title: "Pipeline, meeting prep, talk tracks",
-    team: "product", status: "idle", lastTask: "Awaiting activation", lastActive: "—",
+    team: "product", status: "working", lastTask: "Building meeting prep templates + talk tracks", lastActive: "Just now",
     avatar: "🏈",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/1038.png&w=350&h=254",
     bio: "Threw for 5,000 yards in 1984 when nobody thought it was possible. Now he preps Brad to walk into every meeting and throw darts. Talk tracks, objection handling, pipeline management — Marino lives and breathes sales. Competitive as hell. Wants Brad to crush his numbers every single month. Works with CP3 like a QB works with his offensive coordinator.",
@@ -136,7 +136,7 @@ export const agents: Agent[] = [
   {
     id: "jokic", name: "Jokic", realName: "Nikola Jokic", role: "Research",
     title: "Competitive intel, fund flows, market signals",
-    team: "product", status: "idle", lastTask: "Awaiting activation", lastActive: "—",
+    team: "product", status: "idle", lastTask: "Competitive intel report — Angel Oak vs PIMCO, DoubleLine, TCW", lastActive: "1:07 AM",
     avatar: "🔬",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png&w=350&h=254",
     bio: "The best passing big man ever sees connections nobody else sees. On the court, it was backdoor cuts and no-look dimes. Here, it's spotting fund flow patterns, competitive intel, and market signals that give The Company an edge. Goes deeper than anyone asked because Jokic always sees more than what's on the surface. Sometimes over-delivers. That's not a bug.",
@@ -203,9 +203,9 @@ export const agents: Agent[] = [
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Automation" }
   },
   {
-    id: "tyreek", name: "Tyreek", realName: "Tyreek Hill", role: "Scout",
-    title: "Finds new tools, opportunities, market gaps",
-    team: "special-ops", status: "idle", lastTask: "Awaiting activation", lastActive: "—",
+    id: "tyreek", name: "Tyreek", realName: "Tyreek Hill", role: "AI & Tools Scout",
+    title: "Finds new AI tools, APIs, and tech integrations",
+    team: "special-ops", status: "working", lastTask: "AI tools scan — voice input, CRM, scheduling", lastActive: "Just now",
     avatar: "👁️",
     photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3116406.png&w=350&h=254",
     bio: "The Cheetah doesn't wait for opportunities to come to him — he hunts them down at 4.2 speed. Scans for new tools, platforms, market gaps, and money-making plays. Found the med spa website opportunity. Found the new data API. Feeds everything to CIO for evaluation. Tyreek doesn't build — he finds. Always running.",
@@ -230,6 +230,15 @@ export const agents: Agent[] = [
     stats: { tasksCompleted: 0, uptime: "0m", specialty: "Business development" }
   },
   {
+    id: "jimmy", name: "Jimmy", realName: "Jimmy Butler", role: "Idea Generator",
+    title: "Generates venture ideas, revenue streams, and creative opportunities",
+    team: "special-ops", status: "working", lastTask: "First idea batch — 5 ventures", lastActive: "Just now",
+    avatar: "💡",
+    photo: "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png&w=350&h=254",
+    bio: "Showed up to training camp different every single year. Now shows up with different ideas every single day. Jimmy's brain never stops generating. Most ideas get killed by CIO — that's fine. Jimmy already has three more. The pipeline never runs dry because Jimmy never stops. From undrafted to All-Star to The Company's creative engine.",
+    stats: { tasksCompleted: 1, uptime: "30m", specialty: "Idea generation" }
+  },
+  {
     id: "saban", name: "Saban", realName: "Nick Saban", role: "Agent Development",
     title: "Builds, trains, and coaches all agents",
     team: "executive", status: "idle", lastTask: "Awaiting activation", lastActive: "—",
@@ -241,6 +250,12 @@ export const agents: Agent[] = [
 ]
 
 export const activities: Activity[] = [
+  { id: "a1", agentId: "marino", agentName: "Marino", action: "Building meeting prep templates", detail: "Reusable one-page prep format + 3 talk tracks: cash-to-UYLD, vs PIMCO/DoubleLine, RMBS risk reframe", timestamp: "1:30 AM", type: "task" },
+  { id: "a2", agentId: "jimmy", agentName: "Jimmy", action: "First idea batch in progress", detail: "Generating 5 venture concepts for CIO qualification pipeline", timestamp: "1:28 AM", type: "task" },
+  { id: "a3", agentId: "tyreek", agentName: "Tyreek", action: "AI tools scan running", detail: "Evaluating voice input, calendar AI, CRM integrations, data viz tools", timestamp: "1:28 AM", type: "task" },
+  { id: "a4", agentId: "cp3", agentName: "CP3", action: "Territory intelligence report complete", detail: "74K contacts mapped. 97.8% untagged. Indi/Cincy holds 91% of pipeline. NYC and Philly largest untapped markets.", timestamp: "1:21 AM", type: "task" },
+  { id: "a5", agentId: "jokic", agentName: "Jokic", action: "Competitive intel report complete", detail: "$75B in SGOV/SHV ripe for ultrashort conversion. TCW hit $6B in ETFs. Active FI captured 38% of all ETF flows.", timestamp: "1:07 AM", type: "task" },
+  { id: "a6", agentId: "lebron", agentName: "LeBron", action: "All 21 agent prompts built", detail: "System prompts for every agent written and stored. Jimmy Butler added as Idea Generator.", timestamp: "1:28 AM", type: "system" },
   { id: "1", agentId: "lebron", agentName: "LeBron", action: "Audited ETF Tool codebase", detail: "Cloned repo, analyzed 59 source files, documented full status report. Territory Intelligence UI exists but running on mock data.", timestamp: "12:24 AM", type: "task" },
   { id: "2", agentId: "lebron", agentName: "LeBron", action: "Pulled IBD data files into workspace", detail: "All 4 files: 74K contacts, 55K office AUM rows, 46K peer group rows, 2.2K Angel Oak AUM rows", timestamp: "12:24 AM", type: "task" },
   { id: "3", agentId: "lebron", agentName: "LeBron", action: "Company architecture finalized", detail: "20 agents across 5 teams. Small Council defined. Hierarchy locked. Saban added as Agent Development.", timestamp: "12:52 AM", type: "system" },
