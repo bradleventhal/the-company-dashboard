@@ -1,14 +1,19 @@
 {
-  "lastUpdated": "2026-03-04T00:00:00-05:00",
   "agents": {
-    "jjettas": { "grade": "A", "reps": 1, "lastTask": "Territory Intel Analysis", "trend": "new" },
-    "marino": { "grade": "A", "reps": 1, "lastTask": "Meeting Prep Package", "trend": "new" },
-    "steph": { "grade": "A+", "reps": 1, "lastTask": "Territory Intel Product Spec", "trend": "new" },
-    "wade": { "grade": "B+", "reps": 1, "lastTask": "Full Operational Audit", "trend": "new" },
-    "mcvay": { "grade": "A+", "reps": 1, "lastTask": "90-Day Strategic Plan", "trend": "new" },
-    "ohtani": { "grade": "A-", "reps": 1, "lastTask": "Integration Assessment", "trend": "new" },
-    "jarvis": { "grade": "A", "reps": 2, "lastTask": "Real Morning Briefing March 4", "trend": "up", "history": ["B+", "A"] },
-    "elon": { "grade": "A", "reps": 1, "lastTask": "Tech Feasibility Review — Territory Intel Spec", "trend": "new" },
-    "saban": { "grade": "A-", "reps": 4, "lastTask": "11 Agent Builds + Cross-Cutting", "trend": "up", "history": ["D", "B+", "A-", "A-"] }
-  }
+    "steph": { "grade": "A+", "lastTask": "Territory Intel Spec v2", "reps": 2, "trend": "stable" },
+    "mcvay": { "grade": "A+", "lastTask": "WIN Deep Dive (27KB, no web search)", "reps": 2, "trend": "stable" },
+    "jjettas": { "grade": "A", "lastTask": "Territory Intel v2 + Expansion Analysis", "reps": 2, "trend": "up" },
+    "marino": { "grade": "A", "lastTask": "Meeting Prep Package", "reps": 1, "trend": "stable" },
+    "elon": { "grade": "A", "lastTask": "Dashboard build + Territory MVP started", "reps": 2, "trend": "stable" },
+    "jarvis": { "grade": "A", "lastTask": "Brad Brew Test Script", "reps": 2, "trend": "up" },
+    "wade": { "grade": "A", "lastTask": "8-Task Status Report (9AM delivery)", "reps": 3, "trend": "up" },
+    "ohtani": { "grade": "A", "lastTask": "FRED API Integration", "reps": 2, "trend": "up" },
+    "saban": { "grade": "A-", "lastTask": "11 Agent Fixes + Wave 2 Onboarding Prep", "reps": 5, "trend": "up" },
+    "brady": { "grade": "A+", "lastTask": "QA Report Day 2 — 6 deliverables reviewed, all graded, specific fixes listed", "reps": 1, "trend": "new-star" },
+    "achane": { "grade": "pending", "lastTask": "Just wired up", "reps": 0, "trend": "new" },
+    "tyreek": { "grade": "pending", "lastTask": "Just wired up", "reps": 0, "trend": "new" }
+  },
+  "lastUpdated": "2026-03-04T14:40:00Z",
+  "gradeScale": "A+ (exceptional) → A (strong) → A- (good) → B+ (acceptable) → B (below) → C (unacceptable) → D (redo)",
+  "gradingBy": "Brady (QA) → LeBron (final review)"
 }
