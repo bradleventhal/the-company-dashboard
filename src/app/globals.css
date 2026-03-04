@@ -153,3 +153,52 @@
 .glow-green { box-shadow: 0 0 15px rgba(0, 255, 136, 0.3), inset 0 0 15px rgba(0, 255, 136, 0.05); }
 .glow-red { box-shadow: 0 0 15px rgba(255, 59, 92, 0.3); }
 .glow-purple { box-shadow: 0 0 15px rgba(168, 85, 247, 0.3); }
+
+/* ═══ OpenClawfice NPC Animations ═══ */
+
+@keyframes npcBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes npcPartyJump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes plumbobSpin {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(0.85) translateY(-3px); }
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+@keyframes statusFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes npcTypeLeft {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg) translateY(-1px); }
+  75% { transform: rotate(4deg); }
+}
+
+@keyframes npcTypeRight {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  75% { transform: rotate(-8deg) translateY(-1px); }
+}
+
+@keyframes npcBlink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
