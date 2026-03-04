@@ -1,0 +1,14 @@
+{
+  "lastUpdated": "2026-03-04T00:00:00-05:00",
+  "agents": {
+    "jjettas": { "grade": "A", "reps": 1, "lastTask": "Territory Intel Analysis", "trend": "new" },
+    "marino": { "grade": "A", "reps": 1, "lastTask": "Meeting Prep Package", "trend": "new" },
+    "steph": { "grade": "A+", "reps": 1, "lastTask": "Territory Intel Product Spec", "trend": "new" },
+    "wade": { "grade": "B+", "reps": 1, "lastTask": "Full Operational Audit", "trend": "new" },
+    "mcvay": { "grade": "A+", "reps": 1, "lastTask": "90-Day Strategic Plan", "trend": "new" },
+    "ohtani": { "grade": "A-", "reps": 1, "lastTask": "Integration Assessment", "trend": "new" },
+    "jarvis": { "grade": "A", "reps": 2, "lastTask": "Real Morning Briefing March 4", "trend": "up", "history": ["B+", "A"] },
+    "elon": { "grade": "A", "reps": 1, "lastTask": "Tech Feasibility Review — Territory Intel Spec", "trend": "new" },
+    "saban": { "grade": "A-", "reps": 4, "lastTask": "11 Agent Builds + Cross-Cutting", "trend": "up", "history": ["D", "B+", "A-", "A-"] }
+  }
+}

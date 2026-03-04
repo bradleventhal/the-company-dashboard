@@ -1,0 +1,26 @@
+{
+  "lastUpdated": "2026-03-04T00:15:00-05:00",
+  "agents": [
+    { "id": "main", "name": "LeBron", "role": "CEO", "workspace": "workspace", "botStatus": "active", "model": "opus", "heartbeat": "30m", "grade": null, "emoji": "👑" },
+    { "id": "wade", "name": "Wade", "role": "COO / Auditor", "workspace": "workspace-wade", "botStatus": "active", "model": "opus", "heartbeat": "60m", "grade": "B+", "emoji": "🏀" },
+    { "id": "elon", "name": "Elon", "role": "CTO / Builder", "workspace": "workspace-elon", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "pending", "emoji": "🚀" },
+    { "id": "cio", "name": "McVay", "role": "CIO / Strategy", "workspace": "workspace-mcvay", "botStatus": "active", "model": "opus", "heartbeat": "150m", "grade": "A+", "emoji": "🧠" },
+    { "id": "jarvis", "name": "Jarvis", "role": "Chief of Staff", "workspace": "workspace-jarvis", "botStatus": "active", "model": "opus", "heartbeat": "60m", "grade": "B+", "emoji": "📅" },
+    { "id": "saban", "name": "Saban", "role": "Agent Developer", "workspace": "workspace-saban", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "A-", "emoji": "🏈" },
+    { "id": "steph", "name": "Steph", "role": "Product", "workspace": "workspace-steph", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "A+", "emoji": "📚" },
+    { "id": "marino", "name": "Marino", "role": "Sales Strategy", "workspace": "workspace-marino", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "A", "emoji": "🏆" },
+    { "id": "jjettas", "name": "JJettas", "role": "Analytics", "workspace": "workspace-jjettas", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "A", "emoji": "📊" },
+    { "id": "ohtani", "name": "Ohtani", "role": "Integrator", "workspace": "workspace-ohtani", "botStatus": "active", "model": "opus", "heartbeat": null, "grade": "A-", "emoji": "⚾" },
+    { "id": "brady", "name": "Brady", "role": "QA", "workspace": "workspace-brady", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🔍" },
+    { "id": "cp3", "name": "CP3", "role": "Territory Strategy", "workspace": "workspace-cp3", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "♟️" },
+    { "id": "jokic", "name": "Jokic", "role": "Research", "workspace": "workspace-jokic", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🔬" },
+    { "id": "tyreek", "name": "Tyreek", "role": "Scout", "workspace": "workspace-tyreek", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "⚡" },
+    { "id": "jimmy", "name": "Jimmy", "role": "Idea Generator", "workspace": "workspace-jimmy", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "💡" },
+    { "id": "giannis", "name": "Giannis", "role": "Security & Compliance", "workspace": "workspace-giannis", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🛡️" },
+    { "id": "mahomes", "name": "Mahomes", "role": "Creative Director", "workspace": "workspace-mahomes", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🎨" },
+    { "id": "ai", "name": "AI (Allen Iverson)", "role": "Sales Content", "workspace": "workspace-ai", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "📄" },
+    { "id": "achane", "name": "Achane", "role": "Speed & Automation", "workspace": "workspace-achane", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🏎️" },
+    { "id": "magic", "name": "Magic", "role": "Partnerships & BD", "workspace": "workspace-magic", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "🤝" },
+    { "id": "steward", "name": "Steward", "role": "CXO", "workspace": "workspace-steward", "botStatus": "needs-bot", "model": "opus", "heartbeat": null, "grade": null, "emoji": "👔" }
+  ]
+}
