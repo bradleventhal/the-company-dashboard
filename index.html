@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The Company Dashboard</title>
+<style>
+:root{--bg:#0F172A;--card:#13203b;--text:#F8FAFC;--muted:#94a3b8;--teal:#14B8A6;}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui;background:var(--bg);color:var(--text)}
+.wrap{max-width:1100px;margin:auto;padding:16px} h1,h2{margin:.2rem 0 .6rem} h1{font-size:1.6rem} h2{font-size:1.1rem;color:var(--teal)}
+.grid{display:grid;gap:12px} .cols{grid-template-columns:1fr} @media(min-width:900px){.cols{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid #28406d;border-radius:14px;padding:14px}
+.small{color:var(--muted);font-size:.88rem} .pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.75rem}
+.ok{background:#123b35;color:#7bf0df} .bad{background:#4a2020;color:#ffb4b4}
+.row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid #22365f} .row:last-child{border-bottom:0}
+a{color:#7de7da}
+</style></head><body><div class="wrap">
+<h1>The Company — Internal Dashboard</h1><div class="small">Generated: <span id='gen'></span></div>
+<div class='grid cols'>
+<section class='card'><h2>Agent Roster (20)</h2><div id='agents'></div></section>
+<section class='card'><h2>Active Sprint / Linear</h2><div id='issues'></div></section>
+<section class='card'><h2>Cron Health</h2><div id='crons'></div></section>
+<section class='card'><h2>Recent Activity</h2><div id='activity'></div></section>
+</div>
+<section class='card' style='margin-top:12px'><h2>SiteDrop Status</h2><div id='sitedrop'></div></section>
+</div>
+<script>
+fetch('./dashboard_data.json').then(r=>r.json()).then(d=>{
+document.getElementById('gen').textContent=new Date(d.generatedAt).toLocaleString();
+const a=document.getElementById('agents'); d.agents.forEach(x=>a.insertAdjacentHTML('beforeend',`<div class='row'><div><b>${x.name}</b><div class='small'>${x.role}</div></div><div class='small'>${x.lastActivity}</div></div>`));
+const i=document.getElementById('issues'); d.openIssues.slice(0,10).forEach(x=>i.insertAdjacentHTML('beforeend',`<div class='row'><div><b>${x.identifier}</b> ${x.title}</div><div class='small'>${x.state.name}</div></div>`));
+const c=document.getElementById('crons'); d.cronJobs.forEach(x=>c.insertAdjacentHTML('beforeend',`<div class='row'><div>${x.name}<div class='small'>${x.schedule}</div></div><span class='pill ${x.status==='ok'?'ok':'bad'}'>${x.status}</span></div>`));
+const r=document.getElementById('activity'); d.recentActivity.forEach(x=>r.insertAdjacentHTML('beforeend',`<div class='row'><div>${x}</div></div>`));
+const s=document.getElementById('sitedrop'); s.innerHTML=`<div><b>${d.sitedrop.status}</b></div><div class='small'>${d.sitedrop.notes}</div><div><a href='${d.sitedrop.github}'>${d.sitedrop.github}</a></div>`;
+})
+</script></body></html>
